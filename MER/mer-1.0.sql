@@ -6,11 +6,6 @@
 
 /* Drop Sequences for Autonumber Columns */
 
- 
-
- 
-
- 
 
 /* Drop Tables */
 
@@ -24,9 +19,7 @@ DROP TABLE IF EXISTS identificacion_oficial CASCADE
 ;
 
 DROP TABLE IF EXISTS identificaciones_cliente CASCADE
-;
-
-/* Create Tables */
+;/* Create Tables */
 
 CREATE TABLE catalogo_general
 (
@@ -100,14 +93,14 @@ ALTER TABLE cliente ADD CONSTRAINT PK_Table1
 CREATE INDEX IXFK_cliente_catalogo_general ON cliente (id_estatus ASC)
 ;
 
-ALTER TABLE identificacion_oficial ADD CONSTRAINT PK_Table2
+ALTER TABLE identificacion_oficial ADD CONSTRAINT PK_Table20
 	PRIMARY KEY (id_identificacion)
 ;
 
 CREATE INDEX IXFK_identificacion_oficial_catalogo_general ON identificacion_oficial (id_estatus ASC)
 ;
 
-ALTER TABLE identificaciones_cliente ADD CONSTRAINT PK_Table2
+ALTER TABLE identificaciones_cliente ADD CONSTRAINT PK_Table200
 	PRIMARY KEY (id_cliente,id_identificacion)
 ;
 
@@ -143,9 +136,3 @@ ALTER TABLE identificaciones_cliente ADD CONSTRAINT FK_identificaciones_cliente_
 ;
 
 /* Create Table Comments, Sequences for Autonumber Columns */
-
- 
-
- 
-
- 
